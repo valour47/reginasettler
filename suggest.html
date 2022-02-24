@@ -88,10 +88,10 @@
 		<div class="container mt-4">
 			<div class="row">
 				<div class="col-12">
-					<div class="alert alert-success" role="alert">
+					<div class="alert alert-success" role="alert" id="alertsuccess">
 						Your suggestion has been received. Many thanks. We will let you know if it has been applied or if it does not qualify.
 					</div>
-					<div class="alert alert-danger" role="alert">
+					<div class="alert alert-danger" role="alert" id="alerterror">
 						Error message
 					</div>
 					<p>
@@ -104,7 +104,7 @@
 						</div>
 						<div class="mb-3">
 							<label for="exampleFormControlTextarea1" class="form-label">Suggestion</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							<textarea class="form-control" id="exampleFormControlTextarea1" name="message" id="message" rows="3"></textarea>
 						</div>
 						<div class="mb-4">
 							<label for="formFile" class="form-label">Photos (Optional)</label>
@@ -117,7 +117,7 @@
 								</div>
 							</div>
 						</div>
-						<input type="submit" class="btn btn-success" value="Submit" />
+						<input type="button" class="btn btn-success" value="Submit" onclick="processForm(this.message);" />
 					</form>
 				</div>
 			</div>
